@@ -1067,7 +1067,7 @@ footer {
 
     .card-list { grid-template-columns: 1fr 1fr; }
 
-    /* .cart-tab { width: 100%; right: -100%; } */
+    .cart-tab { width: 100%; }
 
     .hero-stats { gap: 1.2rem; }
     .stat-num { font-size: 1.1rem; }

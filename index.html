@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.css" />
+    <title>Feast — Food Delivery</title>
+</head>
+<body>
+
+<div class="noise"></div>
+
+<!-- HEADER -->
+<header>
+    <nav class="navbar wrapper">
+        <a href="" class="logo">Feast<span>.</span></a>
+        <ul class="navlist">
+            <li><a href="#">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+        </ul>
+        <div class="desktop-action">
+            <a href="" class="cart-icon">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span class="cart-value">0</span>
+            </a>
+            <button class="btn">Sign in <i class="fa-solid fa-arrow-right-from-bracket"></i></button>
+            <a href="" class="hamburger"><i class="fa-solid fa-bars"></i></a>
+        </div>
+        <ul class="mobile-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="">Menu</a></li>
+            <li><a href="">Service</a></li>
+            <li><a href="">About</a></li>
+            <li><a href="">Contact</a></li>
+            <li><button class="btn">Sign in <i class="fa-solid fa-arrow-right-from-bracket"></i></button></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- MAIN SECTION STARTS-->
+<main>
+    <!-- HERO SECTION -->
+    <section class="hero-wrap">
+        <div class="hero-section wrapper">
+            <div class="hero-content">
+                <div class="hero-badge">🚀 Fast delivery in 30 min</div>
+                <h1>Enjoy Your<br><span>Delicious</span><br>Food</h1>
+                <p class="para">We'll fill your table with flavors that tell stories — crafted fresh, delivered fast, straight to your door.</p>
+                <div class="hero-actions">
+                    <button class="btn btn-primary">Order Now <i class="fa-solid fa-arrow-right"></i></button>
+                    <a href="" class="btn btn-ghost">View Menu</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat"><span class="stat-num">4.9★</span><span class="stat-label">Rating</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">50K+</span><span class="stat-label">Orders</span></div>
+                    <div class="stat-divider"></div>
+                    <div class="stat"><span class="stat-num">30min</span><span class="stat-label">Delivery</span></div>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <div class="hero-blob"></div>
+                <img src="./assets/delivery-boy.png" alt="Delivery" class="hero-img">
+                <div class="hero-float-card">
+                    <img src="./assets/burger.png" alt="" class="float-img">
+                    <div>
+                        <p class="float-name">Double Beef Burger</p>
+                        <p class="float-price">$12.99</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="hero-scroll-hint">Scroll to explore <i class="fa-solid fa-arrow-down"></i></div>
+    </section>
+
+    <!-- SERVICES SECTION -->
+    <section class="section-wrap wrapper">
+        <div class="section-head">
+            <span class="section-tag">How It Works</span>
+            <h2>Simple As <em>1, 2, 3</em></h2>
+        </div>
+        <div class="service-grid">
+            <div class="service-card" style="--delay:0s">
+                <div class="service-icon-wrap">
+                    <img src="./assets/easy-to-order.png" alt="">
+                </div>
+                <span class="service-num">01</span>
+                <h3>Easy to Order</h3>
+                <p>Just a few taps and your meal is on its way — no fuss, no wait.</p>
+            </div>
+            <div class="service-card featured" style="--delay:.1s">
+                <div class="service-icon-wrap">
+                    <img src="./assets/best-quality.png" alt="">
+                </div>
+                <span class="service-num">02</span>
+                <h3>Best Quality</h3>
+                <p>Premium ingredients, carefully sourced — because you deserve the best.</p>
+            </div>
+            <div class="service-card" style="--delay:.2s">
+                <div class="service-icon-wrap">
+                    <img src="./assets/fast-delivery.png" alt="">
+                </div>
+                <span class="service-num">03</span>
+                <h3>Fast Delivery</h3>
+                <p>Hot and fresh at your door, always on time — often even faster.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- MENU SECTION -->
+    <section class="section-wrap wrapper">
+        <div class="section-head">
+            <span class="section-tag">Our Menu</span>
+            <h2>The Most <em>Popular</em></h2>
+        </div>
+        <div class="card-list" id="card-list"></div>
+
+        <!-- CART TAB -->
+        <div class="cart-tab">
+            <div class="cart-header">
+                <h3>Your Cart</h3>
+                <button class="close-btn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="cart-list"></div>
+            <div class="cart-footer">
+                <div class="total-container">
+                    <span>Total</span>
+                    <span class="cart-total">$0.00</span>
+                </div>
+                <button class="btn checkout-btn">Checkout <i class="fa-solid fa-arrow-right"></i></button>
+            </div>
+        </div>
+        <div class="cart-overlay"></div>
+    </section>
+
+    <!-- REVIEWS SECTION -->
+    <section class="section-wrap wrapper review-wrap">
+        <div class="review-image">
+            <div class="review-blob"></div>
+            <img src="./assets/delivery-boy-with-phone.png" alt="">
+        </div>
+        <div class="review-container">
+            <span class="section-tag">Reviews</span>
+            <h2>What They <em>Say</em></h2>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Feast is the best. Delicious meals, incredible service, and blazing fast delivery. Totally recommend!"</p>
+                            <div class="reviewer">
+                                <div class="profile"><img src="./assets/profile1.jpeg" alt=""></div>
+                                <div><strong>Guy Hawkins</strong><small>Regular Customer</small></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Bold flavors, unforgettable experience. Every dish is crafted with care. My go-to food app, always!"</p>
+                            <div class="reviewer">
+                                <div class="profile"><img src="./assets/profile3.jpeg" alt=""></div>
+                                <div><strong>Olivia Smith</strong><small>Food Enthusiast</small></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="review-card">
+                            <div class="stars">★★★★★</div>
+                            <p>"Fresh ingredients, creative menu, and warm service. A hidden gem — truly a foodie's paradise!"</p>
+                            <div class="reviewer">
+                                <div class="profile"><img src="./assets/profile2.jpeg" alt=""></div>
+                                <div><strong>Sophia Anderson</strong><small>Food Blogger</small></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-nav">
+                    <a class="arrow" id="prev"><i class="fa-solid fa-arrow-left"></i></a>
+                    <a class="arrow" id="next"><i class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- APP SECTION -->
+    <section class="section-wrap wrapper">
+        <div class="app-container">
+            <div class="app-image">
+                <img src="./assets/mobile-app.png" alt="">
+            </div>
+            <div class="app-content">
+                <span class="section-tag light">Our App</span>
+                <h2>Order From<br>Anywhere,<br><em>Anytime</em></h2>
+                <p class="para">Discover food wherever you are. Download the app and enjoy seamless ordering with real-time tracking.</p>
+                <div class="app-btns">
+                    <button class="btn app-btn"><i class="fa-brands fa-apple"></i> App Store</button>
+                    <button class="btn app-btn ghost"><i class="fa-brands fa-google-play"></i> Google Play</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- NEWSLETTER SECTION -->
+    <section class="section-wrap wrapper newsletter-wrap">
+        <div class="newsletter-card">
+            <span class="section-tag">Newsletter</span>
+            <h2>Stay in the <em>Loop</em></h2>
+            <p class="para">Get daily updates, exclusive deals, and new menu drops right in your inbox.</p>
+            <label class="input-container">
+                <i class="fa-solid fa-envelope"></i>
+                <input type="email" placeholder="your@email.com" autocomplete="off">
+                <button class="btn">Subscribe</button>
+            </label>
+        </div>
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-top wrapper">
+        <div class="footer-brand">
+            <a href="" class="logo">Feast<span>.</span></a>
+            <p>Filling your table with flavors that matter — crafted fresh, delivered fast.</p>
+            <div class="social-links">
+                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+        </div>
+        <div class="footer-links-group">
+            <h4>Menu</h4>
+            <a href="#">Special</a>
+            <a href="#">Popular</a>
+            <a href="#">Category</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Company</h4>
+            <a href="#">Why Feast</a>
+            <a href="#">Partner with us</a>
+            <a href="#">About us</a>
+            <a href="#">FAQs</a>
+        </div>
+        <div class="footer-links-group">
+            <h4>Support</h4>
+            <a href="#">Account</a>
+            <a href="#">Support Center</a>
+            <a href="#">Feedback</a>
+            <a href="#">Contact</a>
+        </div>
+    </div>
+    <div class="footer-bottom wrapper">
+        <p>© 2026 Feast. All rights reserved.</p>
+        <p>Made with <span style="color:var(--accent)">♥</span> for food lovers</p>
+    </div>
+</footer>
+
+<script defer src="./main.js"></script>
+<script src="./product.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper@12/swiper-bundle.min.js"></script>
+</body>
+</html>

@@ -6,7 +6,7 @@ var swiper = new Swiper(".mySwiper", {
     },
 });
 
-
+const hamburger = document.querySelector('.hamburger')
 const carticon = document.querySelector('.cart-icon')
 const carttab = document.querySelector('.cart-tab')
 const closebtn = document.querySelector('.close-btn')
@@ -14,6 +14,14 @@ const cardList = document.querySelector('.card-list')
 const cartlist = document.querySelector('.cart-list')
 const carttotal = document.querySelector('.cart-total')
 const cartvalue = document.querySelector('.cart-value')
+const mobilemenu = document.getElementById('mobile-menu')
+
+
+hamburger.addEventListener('click',(e) => {
+    e.preventDefault()
+    mobilemenu.classList.toggle('mobile-menu-active');
+    });
+
 
 carticon.addEventListener('click', (e) => {
     e.preventDefault()
